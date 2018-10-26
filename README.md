@@ -9,8 +9,7 @@ https://medium.com/@bartyrad/multi-label-image-classification-with-inception-net
 ### Overview
 All code is found in the src folder and temporary files that are created in the tmp folder. 
 
-Image data used to get to the models for the Expo2018 can be found on sharepoint. Interne Projecten/documents/expo2018/model_images. Hyperparameters used are also the ones that are currently set.  
-
+Images should be self-supplied.
 
 ### Training
 1. Download the image_files folder from sharepoint to get the images. This folder is used to create labels. 
