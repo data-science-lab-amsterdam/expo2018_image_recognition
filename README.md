@@ -12,15 +12,17 @@ All code is found in the src folder and temporary files that are created in the 
 Images should be self-supplied.
 
 ### Training
-1. Download the image_files folder from sharepoint to get the images. This folder is used to create labels. 
+1. Make sure you have images in the correct folders. In more detail: under image_files in the correct folder (i.e. hat or no hat).
 2. run 'python src/create_labels.py' to create labels. Make sure 'tmp/labels.txt' contains the correct labels (e.g. male/female) corresponding to the subdirectories of e.g. image_files/male and image_files/female
-3. Copy images from image_files to a folder containing all images with this format images/multi-label/. This folder with all images is used for training. 
+3. Copy images from image_files to a folder containing all images with this folder-structure images/multi-label/. This folder containing all images is used for training (in contrast to the above one which was used for labelling). 
 4. If cropped images are prefered, use the 'src/crop_faces.py' script to create another directory containing these images. I use images-cropped/multi-label/ as the output folder for the crop_faces script. (Don't forget to change the image folder to be used in the retrain.sh script in this case!)
 4. train the model by 'bash src/retrain.sh'
 
 For training on new data or categories check under 'additional info'. For both, it helps if you clear the tmp folder. 
 
 A helper function which can instantly provide you the class balance of labels is 'python src/class_balance.py'
+
+note: we recognize having images in multiple locations is suboptimal. However since there was a time constraint on this project, structure optimzation was not a priority as much as actual results! 
 
 #### Visualize training progress
 After the retraining is done you can view the logs by running:
